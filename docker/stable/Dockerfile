@@ -5,9 +5,16 @@ RUN export DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND noninteractive
 
 # Clone Vidi from GitHub
+# 使用Fork后的Github地址 https://github.com/LeapDeng/vidi.git
+#RUN export VERSION="2020.12.0" &&\
+#    cd ~ &&\
+#	git clone https://github.com/mapcentia/vidi.git &&\
+#    cd ~/vidi &&\
+#	git checkout tags/${VERSION}
+
 RUN export VERSION="2020.12.0" &&\
     cd ~ &&\
-	git clone https://github.com/mapcentia/vidi.git &&\
+	git clone https://github.com/LeapDeng/vidi.git &&\
     cd ~/vidi &&\
 	git checkout tags/${VERSION}
 
